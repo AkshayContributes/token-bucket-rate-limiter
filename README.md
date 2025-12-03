@@ -1,5 +1,3 @@
----
-
 # 🚦 Token Bucket Rate Limiter (Java)
 
 A lightweight, thread-safe **Token Bucket Rate Limiter** implemented in Java.
