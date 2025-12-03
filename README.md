@@ -5,10 +5,10 @@ Supports multi-user rate limiting using independent token buckets, lazy refill l
 
 This project is useful for:
 
-* Learning rate limiting algorithms
-* Practicing concurrency-safe design
-* Interview preparation
-* Embedding basic rate limiting into services
+- Learning rate limiting algorithms
+- Practicing concurrency-safe design
+- Interview preparation
+- Embedding basic rate limiting into services
 
 ---
 
@@ -18,17 +18,17 @@ This project is useful for:
 
 Each user gets:
 
-* `maxTokens` → bucket capacity (burst size)
-* `refillRatePerSecond` → steady refill rate
-* `tokens` → current available tokens
+- `maxTokens` → bucket capacity (burst size)
+- `refillRatePerSecond` → steady refill rate
+- `tokens` → current available tokens
 
 Requests are allowed **only if a token is available**.
 
 ### ✔️ Thread-Safe Design
 
-* `ConcurrentHashMap` stores buckets per user
-* Each bucket has its own `ReentrantLock`
-* No global lock → excellent scalability
+- `ConcurrentHashMap` stores buckets per user
+- Each bucket has its own `ReentrantLock`
+- No global lock → excellent scalability
 
 ### ✔️ Lazy Refill
 
@@ -44,8 +44,8 @@ This avoids background threads and simplifies timing.
 
 Useful logs emitted for:
 
-* allowed requests
-* throttled requests
+- allowed requests
+- throttled requests
 
 (Using `java.util.logging` for simplicity)
 
